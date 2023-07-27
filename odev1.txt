@@ -1,0 +1,25 @@
+1-Python'da Veri Tiplerini araştırınız, her bir veri tipi için kendi cümlelerinizle açıklamalar yazınız.
+
+int = tam sayı
+float = ondalıklı sayı
+boolen = true false değer döndürür
+string = metinsel ifadeler
+tuple = değiştirilemez liste veri tipi
+list = değiştirilebilir liste veri tipi
+
+
+2-Kodlama.io sitesinde değişken olarak kullanıldığını düşündüğünüz verileri, veri tipleriyle birlikte örneklendiriniz.
+
+kurslara kayıt yapılmış mı = bool
+dersleri tamamla yüzdesi = int
+
+
+3-Kodlama.io sitesinde şart blokları kullanıldığını düşündüğünüz kısımları örneklendiriniz ve Python dilinde bu örnekleri koda dökünüz.
+
+loginName = "yusufcan"
+loginPassword = "12345"
+
+if (userName == loginName and userPassword == loginPassword ):
+    print("Hoşgeldiniz")
+else :
+    print("Hatalı giriş")
