@@ -1,0 +1,82 @@
+Bir öğrenci kayıt sistemi yazdığımızı düşünelim. Sistemimizdeki öğrencileri bir listede sadece ad soyad olacak şekilde tutalım.
+
+Bu öğrenci kayıt sistemine;
+
+-Aldığı isim soy isim ile listeye öğrenci ekleyen
+-Aldığı isim soy isim ile eşleşen değeri listeden kaldıran
+-Listeye birden fazla öğrenci eklemeyi mümkün kılan
+-Listedeki tüm öğrencileri tek tek ekrana yazdıran
+-Öğrencinin listedeki index numarası öğrenci numarası olarak kabul edildiğini düşünerek öğrencinin numarasını öğrenmeyi mümkün kılan
+-Listeden birden fazla öğrenci silmeyi mümkün kılan (döngü kullanınız)
+
+
+
+studentList = ["yusuf can","yunus emre","nisa"]
+
+def ogrenciekle():
+    isim = input("ögrencinin adini giriniz :")
+    soyisim = input("ögrencinin soyismini giriniz :")
+    studentList.append(isim + " " + soyisim)
+    print("ögrenci eklenmiştir")
+
+def ogrencisil():
+    isim = input("silinecek ogrenci adi :")
+    soyisim = input("silinicek ogrenci soyadi : ")
+    studentList.remove(isim+" "+soyisim)
+    print("ögrenci silindi")
+
+def cokluOgrenciEkleme():
+    eklemeAdedi = int(input("Eklenecek adedi seçin"))
+    for i in range(eklemeAdedi):
+        ogrenciekle()
+    print(f"{eklemeAdedi} yeni kayıt eklendi ")
+
+def cokluOgrenciSil():
+    silmeadedi = int(input("Silinecek ögrenciler :"))
+    for i in range(silmeadedi):
+        ogrencisil()
+    print(f"{silmeadedi}ögrenciler silindi")
+
+def ogrenciNumarasi():
+    isim = input("öğrenci İsmi: ")
+    soyisim = input("Öğrenci Soyismi: ")
+    ogrenciNo = studentList.index(isim +" " + soyisim)
+    print(f"Öğrencinin numarası: {ogrenciNo}")
+
+def OgrenciListesiniYazdir():
+    ogrenciNo = 0
+    for i in studentList:
+        print(f"{ogrenciNo} {i}")
+        ogrenciNo += 1
+        
+
+while True:
+    print("öğrenci bilgi sistemi")
+    print("1-ogrenci ekle")
+    print("2-ögrenci sil")
+    print("3-çoklu ögrenci ekleme")
+    print("4-çoklu öğrenci silme")
+    print("5-ögrenci numarası ")
+    print("6- Öğrenci Listesi")
+    print("7- Sistemden Çık")
+    menuNo = input("İşlem Seçiniz: ")
+    break
+
+if menuNo == "1":
+    ogrenciekle()
+
+elif menuNo == "2":
+    ogrencisil()
+
+elif menuNo == "3":
+    cokluOgrenciEkleme()
+
+elif menuNo == "4":
+    cokluOgrenciSil()
+
+elif menuNo == "5":
+    ogrenciNumarasi()
+    
+elif menuNo == "6":
+    OgrenciListesiniYazdir()
+     
